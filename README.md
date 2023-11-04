@@ -1,2 +1,2 @@
 # quiz-time-application
-This 
+This is a quiz application that runs 
