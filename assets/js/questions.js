@@ -4,7 +4,7 @@
 //then create an if statement that defines the right answer and the wrong answers, and for each the response that appears at the bottom of all the answers as "Right" or "Wrong" 
 //
 
-//Certainly! Here are the revised questions with varied answer positions:
+//Here is the array of questions for the quiz
 
 var questions = [{
     question: "1. What is the purpose of the `addEventListener` method in JavaScript?",
@@ -30,4 +30,6 @@ var questions = [{
     question: "6. What does the `NaN` value represent in JavaScript?",
     choices: ["Null and None", "Not a Number", "Numbered Array", "Negative Number"],
     correctAnswer: 2
-}
+}]
+
+//I used ChatGPT to create the quiz questions.Then added the questions and answers to the above array
