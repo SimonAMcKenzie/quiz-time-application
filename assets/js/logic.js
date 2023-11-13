@@ -1,11 +1,13 @@
 //define variables for all required DOM nodes
-var startScreenEl = document.getElementById('#start-screen');
-var btnStartEl = document.getElementById('#start');
-var questionsEl = document.getElementById('#questions');
-var choicesEl = document.getElementById('#choices');
-var endScreenEl = document.getElementById('#end-screen');
-var btnSubmitEl = document.getElementById ('#submit');
-var feedbackEl = document.getElementById('#feedback');
+var startScreenEl = document.getElementById('start-screen');
+console.log('Script loaded')
+var btnStartEl = document.getElementById('start');
+var timerEl = document.getElementById('timer') 
+var questionsEl = document.getElementById('questions');
+var choicesEl = document.getElementById('choices');
+var endScreenEl = document.getElementById('end-screen');
+var btnSubmitEl = document.getElementById ('submit');
+var feedbackEl = document.getElementById('feedback');
 
 console.table(startScreenEl);
 
@@ -17,6 +19,11 @@ console.table(startScreenEl);
 // User must click Start Quiz button to begin quiz
     // an event listener for the Start Quiz button with click functionality must be added 
     // on click the user should then be taken to the quiz
+
+
+var currentQuestionIndex = 0;
+var timeLeft = 90; // Initial timer value in seconds
+
 btnStartEl.addEventListener('click', startQuiz);
 
 function startQuiz() {
@@ -27,7 +34,7 @@ function startQuiz() {
 }
 // Timer starts when quiz begins
 let timerInterval;
-let timeLeft = 60; // set your desired time limit
+// let timeLeft = 90; // set your desired time limit
 
 function startTimer() {
     timerInterval = setInterval(function () {
@@ -59,10 +66,44 @@ function showQuestion(index) {
         choicesContainer.appendChild(button);
     });
 }
+
+function checkAnswer(userChoice) {
+    if (userChoice === questions[currentQuestionIndex].correctAnswer) {
+        // Correct answer
+        updateCorrectAnswerScore(); // Update the correct answer score
+        showFeedback('Correct!'); // Show feedback for correct answer
+    } else {
+        updateIncorrectAnswerCount(); // Update the incorrect answer count
+        deductTime(); // Deduct time for incorrect answer
+        showFeedback('Incorrect!'); // Show feedback for incorrect answer
+    }
+
+    currentQuestionIndex++;
+
+    if (currentQuestionIndex < questions.length) {
+        // More questions available
+        showQuestion(currentQuestionIndex);
+    } else {
+        // No more questions, end the quiz
+        endQuiz();
+    }
+}
 // Once all the questions are answered or the timer reaches zero the game is finished
+function endQuiz() {
+    clearInterval(timerInterval);
+    endScreenEl.classList.remove('hide');
+    document.getElementById('final-score').textContent = finalScore;/* calculate and set the final score */
+}
 // A screen appears for the user to input their initials and score, which they then submit
     // an input form must be created to allow users to input details
     // an event listener for the Submit button with click functionality must be added to the bottom of the form (linked to HTML)
+    btnSubmitEl.addEventListener('click', submitScore);
+
+    function submitScore() {
+        const initials = document.getElementById('initials').value;
+        // Handle the submission, store the score and initials, etc.
+        // Redirect to the start screen or high scores page.
+    }
 // when the user clicks the submit button the game goes back to the start screen
 // the user can then see where there score ranks by going clicking the view scores text on the top left
 
