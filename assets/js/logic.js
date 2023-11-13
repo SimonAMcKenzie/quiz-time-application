@@ -68,13 +68,15 @@ function showQuestion(index) {
 }
 
 function checkAnswer(userChoice) {
+    console.log('User Choice:', userChoice);
+    console.log('Correct Answer:', questions[currentQuestionIndex].correctAnswer);
     if (userChoice === questions[currentQuestionIndex].correctAnswer) {
         // Correct answer
-        // updateCorrectAnswerScore(); // Update the correct answer score
+        updateCorrectAnswerScore(); // Update the correct answer score
         feedbackEl.textContent =  'Correct!'; // Show feedback for correct answer
     } else {
-        // updateIncorrectAnswerCount(); // Update the incorrect answer count
-        // deductTime(); // Deduct time for incorrect answer
+        updateIncorrectAnswerScore(); // Update the incorrect answer count
+        deductTime(); // Deduct time for incorrect answer
         feedbackEl.textContent = 'Incorrect!'; // Show feedback for incorrect answer
     }
 
@@ -92,7 +94,7 @@ function checkAnswer(userChoice) {
 function endQuiz() {
     clearInterval(timerInterval);
     endScreenEl.classList.remove('hide');
-    document.getElementById('final-score').textContent = finalScore;/* calculate and set the final score */
+    document.getElementById('final-score').textContent = correctAnswerScore;/* calculate and set the final score */
 }
 // A screen appears for the user to input their initials and score, which they then submit
     // an input form must be created to allow users to input details

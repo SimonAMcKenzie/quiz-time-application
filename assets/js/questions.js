@@ -9,27 +9,27 @@
 var questions = [{
     question: "1. What is the purpose of the `addEventListener` method in JavaScript?",
     choices: ["To create a new HTML element", "To change the styling of an HTML     element", "To remove an HTML element from the DOM", "To attach an event handler function to an HTML element"],
-    correctAnswer: 4
+    correctAnswer: 3
 }, {
     question: "2. How do you access the first element of an array in JavaScript?",
     choices: ["array.first", "array.getElement(0)", "array[0]", "array.firstElement"],
-    correctAnswer: 3
+    correctAnswer: 2
 }, {
     question: "3. What is the correct way to declare a variable in JavaScript?",
     choices: [ "const myVar;", "let myVar;", "All of the above", "var myVar;"],
-    correctAnswer: 2
+    correctAnswer: 1
 }, {
     question: "4. What does the `typeof` operator return for an array?",
     choices: ["number", "string", "object", "array"],
-    correctAnswer: 3
+    correctAnswer: 2
 }, {
     question: "5. What is the purpose of the `setTimeout` function in JavaScript?",
     choices: ["To set the value of a variable", "To create a timer for counting the number of function calls", "To add a delay to CSS transitions", "To pause the execution of a function for a specified time"],
-    correctAnswer: 4
+    correctAnswer: 3
 }, {
     question: "6. What does the `NaN` value represent in JavaScript?",
     choices: ["Null and None", "Not a Number", "Numbered Array", "Negative Number"],
-    correctAnswer: 2
+    correctAnswer: 1
 }]
 
 //I used ChatGPT to create the quiz questions.Then added the questions and answers to the above array
