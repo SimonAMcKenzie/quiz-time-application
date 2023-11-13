@@ -62,7 +62,7 @@ function showQuestion(index) {
     currentQuestion.choices.forEach((choice, i) => {
         const button = document.createElement('button');
         button.textContent = choice;
-        button.addEventListener('click', () => checkAnswer(i + 1)); // i + 1 because choices are 1-indexed
+        button.addEventListener('click', () => checkAnswer(i)); // i + 1 because choices are 1-indexed
         choicesContainer.appendChild(button);
     });
 }
@@ -70,12 +70,12 @@ function showQuestion(index) {
 function checkAnswer(userChoice) {
     if (userChoice === questions[currentQuestionIndex].correctAnswer) {
         // Correct answer
-        updateCorrectAnswerScore(); // Update the correct answer score
-        showFeedback('Correct!'); // Show feedback for correct answer
+        // updateCorrectAnswerScore(); // Update the correct answer score
+        feedbackEl.textContent =  'Correct!'; // Show feedback for correct answer
     } else {
-        updateIncorrectAnswerCount(); // Update the incorrect answer count
-        deductTime(); // Deduct time for incorrect answer
-        showFeedback('Incorrect!'); // Show feedback for incorrect answer
+        // updateIncorrectAnswerCount(); // Update the incorrect answer count
+        // deductTime(); // Deduct time for incorrect answer
+        feedbackEl.textContent = 'Incorrect!'; // Show feedback for incorrect answer
     }
 
     currentQuestionIndex++;
