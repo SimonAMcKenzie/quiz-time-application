@@ -31,12 +31,3 @@ var questions = [{
     choices: ["Null and None", "Not a Number", "Numbered Array", "Negative Number"],
     correctAnswer: 2
 }
-
-
-// Answers:
-//     1. d. To attach an event handler function to an HTML element
-//     2. c. array[0]
-//     3. b. let myVar;
-//     4. c. "object"
-//     5. d. To pause the execution of a function for a specified time
-//     6. b. Not a Number
