@@ -21,7 +21,7 @@ function deductTime() {
         timeLeft = 0;
         endQuiz();
     }
-    timerEl.textContent = timeLeft;
+    // timerEl.textContent = timeLeft;
     //incorrectAnswerScore -= 5; can be added if I deciding that wrong answers should also deduct points from score 
 }
 
