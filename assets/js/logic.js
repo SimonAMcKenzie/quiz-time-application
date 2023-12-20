@@ -9,7 +9,8 @@ var endScreenEl = document.getElementById('end-screen');
 var btnSubmitEl = document.getElementById ('submit');
 var feedbackEl = document.getElementById('feedback');
 
-console.table(startScreenEl);
+console.log(startScreenEl);
+console.log(btnSubmitEl);
 
 
 //Instructions
@@ -96,24 +97,10 @@ function endQuiz() {
     endScreenEl.classList.remove('hide');
     document.getElementById('final-score').textContent = correctAnswerScore;/* calculate and set the final score */
 }
-// A screen appears for the user to input their initials and score, which they then submit
-    // an input form must be created to allow users to input details
-    // an event listener for the Submit button with click functionality must be added to the bottom of the form (linked to HTML)
+// A screen appears for the user to input their initials and score, which they then submit by clicking the submit button
     btnSubmitEl.addEventListener('click', submitScore);
 
     function submitScore() {
         const initials = document.getElementById('initials').value;
-        // Handle the submission, store the score and initials, etc.
-        // Redirect to the start screen or high scores page.
-    }
-// when the user clicks the submit button the game goes back to the start screen
-// the user can then see where there score ranks by going clicking the view scores text on the top left
-
-// Tools Needed:
-// Functions for handling user input
-// Functions for checking answers
-// Functions for updating the UI based on user responses
-//Functions for advancing to the next question.
-
-
-
+        // code above needs more work to include localStorage
+}
