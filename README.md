@@ -2,7 +2,7 @@
 
 ## Description
 
-As a coding boot camp student, I developed the Quiz Time Application to test my knowledge of JavaScript fundamentals in a timed quiz format. The primary goal is to allow users to take a timed quiz, answer questions, and store high scores. This helps in gauging individual progress compared to peers.
+As a front-end web development bootcamp student, I developed the Quiz Time Application to test my knowledge of JavaScript fundamentals in a timed quiz format. The primary goal is to allow users to take a timed quiz, answer questions, and store high scores. This helps in gauging individual progress compared to peers.
 
 ## Acceptance Criteria
 
@@ -22,9 +22,9 @@ For this challenege I followed the acceptance criteria below:
 
 ## Usage
 
-- **Deployed Application:** [Quiz Time Application](https://your-deployed-app-url.com)
-- **Repository:** [Quiz Time Repo](https://link-to-your-repo.com)
-- **Screenshot:** ![Quiz Time Screenshot](./screenshots/screenshot.png)
+- **Deployed Application:** [Quiz Time Application](https://simonamckenzie.github.io/quiz-time-application/)
+- **Repository:** [Quiz Time Repo](https://github.com/SimonAMcKenzie/quiz-time-application)
+- **Screenshot:** ![Quiz Time Screenshot](./assets/images/Screenshot%202023-12-20%20011534.png)
 
 ## Credits
 
